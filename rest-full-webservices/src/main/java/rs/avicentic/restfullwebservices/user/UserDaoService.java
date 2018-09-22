@@ -7,7 +7,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
+@Slf4j
 public class UserDaoService {
 
 	private static List<User> users = new ArrayList<>();
@@ -20,6 +23,7 @@ public class UserDaoService {
 	}
 
 	public List<User> findAll() {
+		log.debug("find all returns {} users", users.size());
 		return users;
 	}
 
