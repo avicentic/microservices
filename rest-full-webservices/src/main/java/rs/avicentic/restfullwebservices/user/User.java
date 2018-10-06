@@ -2,6 +2,9 @@ package rs.avicentic.restfullwebservices.user;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
@@ -17,8 +20,11 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @ApiModel(description = "All details about the user")
+@Entity
 public class User {
 
+	@Id
+	@GeneratedValue
 	private Integer id;
 
 	@Size(min = 2, message = "Name should hve at least 2 characters")
