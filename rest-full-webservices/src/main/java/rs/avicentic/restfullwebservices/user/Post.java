@@ -23,7 +23,7 @@ public class Post {
 	@GeneratedValue
 	private Integer id;
 
-	private String desription;
+	private String description;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnore
@@ -34,15 +34,15 @@ public class Post {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Post(Integer id, String desription) {
+	public Post(Integer id, String description) {
 		super();
 		this.id = id;
-		this.desription = desription;
+		this.description = description;
 	}
 
 	@Override
 	public String toString() {
-		return "Post [id=" + id + ", desription=" + desription + "]";
+		return "Post [id=" + id + ", description=" + description + "]";
 	}
 
 }
